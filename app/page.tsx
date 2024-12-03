@@ -33,8 +33,8 @@ export default function Home() {
   const sendSecret = () => {
     console.log("sent");
     toast({
-      title: "Scheduled: Don't forget your secret key",
-      description: "The passkey is: mr-yeung-is-handsome",
+      title: "Scheduled: Don't forget your password",
+      description: "The password is: mr-yeung-is-handsome",
       duration: 20000,
     });
   };
@@ -42,7 +42,7 @@ export default function Home() {
   useEffect(() => {
     const timerId = setInterval(() => {
       setTime((prevTime) => {
-        if (prevTime === "16:00:00") {
+        if (prevTime === "18:00:00") {
           sendSecret();
         }
 
@@ -103,7 +103,12 @@ export default function Home() {
     <>
       <div className="fixed w-full h-full -z-10 pointer-events-none select-none">
         <div className="w-full h-full relative">
-          <Image src={"/wallpaper.jpg"} alt="" fill />
+          <Image
+            src={"/wallpaper.jpg"}
+            alt=""
+            className="object-cover object-left-top"
+            fill
+          />
         </div>
       </div>
 
